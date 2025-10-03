@@ -1,0 +1,15 @@
+{
+  "name": "ShieldStack Hardening Bot",
+  "url": "https://scamshield.my",
+  "hook_attributes": {
+    "url": "https://scamshield.my/api/github/install-webhook"
+  },
+  "redirect_url": "https://scamshield.my/dashboard",
+  "default_permissions": {
+    "contents": "write",
+    "pull_requests": "write",
+    "metadata": "read"
+  },
+  "default_events": ["pull_request", "push"],
+  "public": false
+}

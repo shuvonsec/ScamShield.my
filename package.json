@@ -1,0 +1,50 @@
+{
+  "name": "scamshield-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "dev": "pnpm --filter scamshield-web dev",
+    "dev:worker": "pnpm --filter scamshield-worker dev",
+    "build": "pnpm run -r build",
+    "lint": "pnpm run -r lint",
+    "typecheck": "pnpm run -r typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate",
+    "db:seed": "tsx prisma/seed.ts"
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "pnpm": ">=8"
+  },
+  "dependencies": {
+    "@prisma/client": "5.17.0",
+    "@upstash/qstash": "2.2.1",
+    "ai": "3.1.1",
+    "openai": "4.56.0",
+    "zod": "3.23.8",
+    "express": "4.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "@types/express": "4.17.21",
+    "@types/chrome": "0.0.246",
+    "@types/jsonwebtoken": "9.0.5",
+    "@typescript-eslint/eslint-plugin": "7.9.0",
+    "@typescript-eslint/parser": "7.9.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.1.0",
+    "prettier": "3.2.5",
+    "prisma": "5.17.0",
+    "supertest": "6.4.2",
+    "ts-node": "10.9.2",
+    "tslib": "2.6.2",
+    "tsup": "7.2.0",
+    "tsx": "4.7.0",
+    "typescript": "5.4.5",
+    "vitest": "1.5.0"
+  }
+}

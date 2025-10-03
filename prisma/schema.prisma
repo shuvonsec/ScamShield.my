@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  emailHash String   @unique
+  role      String
+  plan      String?
+  createdAt DateTime @default(now())
+  projects  Project[]
+}
+
+model Project {
+  id        String   @id @default(cuid())
+  ownerId   String
+  name      String
+  domain    String
+  createdAt DateTime @default(now())
+  owner     User     @relation(fields: [ownerId], references: [id])
+  scans     Scan[]
+}
+
+model Scan {
+  id         String    @id @default(cuid())
+  projectId  String
+  status     String
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+  project    Project   @relation(fields: [projectId], references: [id])
+  findings   Finding[]
+}
+
+model Finding {
+  id        String   @id @default(cuid())
+  scanId    String
+  severity  String
+  category  String
+  title     String
+  evidence  Json
+  fix       Json?
+  status    String    @default("open")
+  createdAt DateTime  @default(now())
+  scan      Scan      @relation(fields: [scanId], references: [id])
+}
+
+model URLCheck {
+  id        String   @id @default(cuid())
+  url       String
+  score     Int
+  verdict   String
+  signals   Json
+  submittedBy String?
+  reasons   Json
+  createdAt DateTime @default(now())
+}
+
+model GithubInstallation {
+  id             String   @id @default(cuid())
+  installationId Int      @unique
+  account        String
+  repositories   Json
+  createdAt      DateTime @default(now())
+}
