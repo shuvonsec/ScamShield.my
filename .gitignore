@@ -11,3 +11,5 @@ coverage
 tmp
 .vercel
 .prisma
+apps/web/public/icons/
+apps/web/public/icon.png
