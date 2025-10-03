@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: 'AI-powered scam checker and SME hardening platform',
   manifest: '/manifest.json',
   icons: [
-    { rel: 'icon', url: '/icon-192x192.png' },
-    { rel: 'apple-touch-icon', url: '/icon-512x512.png' }
+    { rel: 'icon', url: '/icons/icon-192.png' },
+    { rel: 'apple-touch-icon', url: '/icons/icon-512.png' }
   ]
 };
 

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "pnpm run generate:icons",
+    "prebuild": "pnpm run generate:icons",
+    "generate:icons": "tsx ../../scripts/generate-web-icons.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
