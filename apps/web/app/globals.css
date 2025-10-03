@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-950 text-slate-50 antialiased;
+}
+
+.safe {
+  color: theme('colors.safe');
+}
+
+.suspicious {
+  color: theme('colors.suspicious');
+}
+
+.malicious {
+  color: theme('colors.malicious');
+}

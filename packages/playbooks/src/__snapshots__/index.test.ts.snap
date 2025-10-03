@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`playbooks generates deterministic changes 1`] = `[
+  {
+    "description": "Add secure headers to reverse proxy configuration.",
+    "diff": "Content-Security-Policy: default-src 'self'; img-src 'self' data:; script-src 'self'; object-src 'none'\\nReferrer-Policy: strict-origin-when-cross-origin\\nX-Frame-Options: DENY",
+    "path": "headers",
+    "type": "config"
+  }
+]`;
