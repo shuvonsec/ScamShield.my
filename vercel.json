@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 512,
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/nightly-scan",
+      "schedule": "0 18 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/worker/(.*)",
+      "destination": "/api/worker/$1"
+    }
+  ]
+}

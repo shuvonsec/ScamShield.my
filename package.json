@@ -1,0 +1,25 @@
+{
+  "name": "scamshield-my",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "dev:worker": "pnpm --filter worker dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "db:generate": "pnpm --filter web prisma generate",
+    "db:migrate": "pnpm --filter web prisma migrate deploy",
+    "db:push": "pnpm --filter web prisma db push",
+    "db:seed": "pnpm --filter web prisma db seed"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "eslint": "8.57.0",
+    "eslint-config-next": "15.0.0-canary.120",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5",
+    "vitest": "1.5.2"
+  }
+}

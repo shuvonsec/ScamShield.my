@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+}
+
+.safe-gradient {
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+}
+
+.suspicious-gradient {
+  background: linear-gradient(135deg, #f97316, #facc15);
+}
+
+.malicious-gradient {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+}

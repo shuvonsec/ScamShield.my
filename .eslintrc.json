@@ -1,0 +1,8 @@
+{
+  "extends": ["next", "next/core-web-vitals"],
+  "parserOptions": {
+    "project": ["./apps/web/tsconfig.json", "./apps/worker/tsconfig.json"],
+    "tsconfigRootDir": __dirname
+  },
+  "ignorePatterns": ["*.config.cjs", "node_modules/", "dist/", "coverage/"]
+}

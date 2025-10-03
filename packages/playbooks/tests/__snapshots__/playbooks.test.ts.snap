@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`playbooks generates deterministic changes 1`] = `[
+  {
+    "description": "Apply CSP header (report-only)",
+    "diff": "Content-Security-Policy-Report-Only: default-src 'self'; img-src 'self' data:; connect-src 'self';"
+  }
+]`;

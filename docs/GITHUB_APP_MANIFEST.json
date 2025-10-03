@@ -1,0 +1,16 @@
+{
+  "name": "ShieldStack Autopatcher",
+  "url": "https://scamshield.my",
+  "hook_attributes": {
+    "url": "https://scamshield.my/api/github/install-webhook"
+  },
+  "redirect_url": "https://scamshield.my/dashboard",
+  "callback_urls": ["https://scamshield.my/api/github/oauth"],
+  "public": false,
+  "default_permissions": {
+    "contents": "write",
+    "metadata": "read",
+    "pull_requests": "write"
+  },
+  "default_events": ["installation", "installation_repositories"]
+}

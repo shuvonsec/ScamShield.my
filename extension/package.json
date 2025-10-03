@@ -1,0 +1,13 @@
+{
+  "name": "scamshield-extension",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "5.4.5",
+    "vite": "5.2.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ScamShield.my",
+  "short_name": "ScamShield",
+  "start_url": "/check",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

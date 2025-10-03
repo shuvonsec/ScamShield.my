@@ -1,0 +1,11 @@
+node_modules
+.pnpm-store
+.next
+out
+.env
+.env.local
+.vercel
+coverage
+.DS_Store
+dist
+pnpm-lock.yaml

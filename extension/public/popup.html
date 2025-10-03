@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ScamShield Check</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #020617; color: #e2e8f0; padding: 16px; width: 280px; }
+      input { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #1e293b; background: #0f172a; color: #e2e8f0; }
+      button { margin-top: 8px; width: 100%; padding: 8px; border-radius: 6px; background: #0ea5e9; color: #020617; border: none; }
+      #status { margin-top: 12px; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="url">URL</label>
+      <input id="url" type="url" required placeholder="https://example.com" />
+      <button type="submit">Check</button>
+    </form>
+    <div id="status"></div>
+    <script src="../src/popup.ts" type="module"></script>
+  </body>
+</html>
